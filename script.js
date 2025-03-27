@@ -51,11 +51,11 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         nav.style.background = 'rgba(0,0,0,0.95)';
         nav.style.padding = '10px 5%';
-        toggle.style.top = '15px';
+        toggle.style.top = '20px';
     } else {
         nav.style.background = 'rgba(0,0,0,0.8)';
         nav.style.padding = '20px 5%';
-        toggle.style.top = '25px';
+        toggle.style.top = '30px';
     }
 });
 

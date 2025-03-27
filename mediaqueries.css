@@ -121,7 +121,7 @@
   /* Ensure menu toggle button is visible */
   .fa-bars {
      position: fixed;
-     top: 25px;
+     top: 30px;
      right: 20px;
      padding: 0 5% 10px;
      font-size: 18px;
