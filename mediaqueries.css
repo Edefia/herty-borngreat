@@ -193,9 +193,14 @@ nav ul {
 }
 
 .event-actions {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
+/* .event-actions .cta-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 .share-btn {
     align-self: flex-start;
 }
