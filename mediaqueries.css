@@ -1,0 +1,282 @@
+@media only screen and (min-width: 769px) {
+    /* Hide the menu toggle icons on desktop */
+    .fa-bars, 
+    .fa-xmark {
+        display: none !important;
+    }
+ 
+    /* Ensure nav ul is visible normally */
+    nav ul {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        display: flex !important;
+        background: transparent !important;
+    }
+ }
+
+ @media only screen and (max-width: 768px){
+    /* Ensure no horizontal scrolling */
+    html, body {
+       overflow-x: hidden !important;
+       max-width: 100vw !important;
+   }
+     body {
+         overflow-x: hidden; /* Prevent horizontal scrolling */
+         -webkit-overflow-scrolling: touch; /* Enables smooth momentum-based scrolling on mobile */
+     }
+     #header{
+        background-position: calc(100% + 180px) center;
+     }
+     nav .fa-solid{
+         display: block;
+         font-size: 25px ;
+     } 
+     nav ul{
+         background: #ff004f;
+         position: fixed;
+         top: 0;
+         right: -200px ;
+         width: 200px;
+         height: 100vh;
+         padding-top: 50px;
+         z-index: 2;
+         transition: right 0.5s;
+     }
+     nav ul li{
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         display: block;
+         margin: 25px ;
+     }
+     nav ul .fa-solid{
+         position: absolute;
+         top: 25px;
+         left: 25px;
+         cursor: pointer;
+     }
+     /* Hide menu off-screen by default */
+ #sidemenu {
+     position: fixed;
+     top: -12px;
+     right: -100vw; /* Fully hidden */
+     overflow-x: hidden;
+     display: none;
+     width: 200px;
+     height: 100%;
+     background:  linear-gradient(to bottom, #231212, #231212, transparent);
+     transition: right 0.5s ease-in-out;
+     z-index: 1000;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+  }
+  
+  /* Show menu when active */
+  #sidemenu.active {
+     right: 0;
+      opacity: 0.9;
+  }
+  /* Initially hide and position menu items off-screen */
+  #sidemenu li {
+     list-style: none;
+     margin: 20px;
+     opacity: 0;
+     transform: translateX(50px); /* Start slightly off-screen */
+     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+ 
+ #sidemenu a{
+    padding: 10px 50px;
+  }
+  
+  
+  /* Animate menu items when the menu opens */
+  #sidemenu.active li {
+     opacity: 1;
+     transform: translateX(0); /* Move into view */
+  }
+  /* Add staggered effect for each menu item */
+  #sidemenu.active li:nth-child(1) {
+     transition-delay: 0.1s;
+  }
+  #sidemenu.active li:nth-child(2) {
+     transition-delay: 0.2s;
+  }
+  #sidemenu.active li:nth-child(3) {
+     transition-delay: 0.3s;
+  }
+  #sidemenu.active li:nth-child(4) {
+     transition-delay: 0.4s;
+  }
+  #sidemenu.active li:nth-child(5) {
+     transition-delay: 0.5s;
+  }
+  #sidemenu.active li:nth-child(6) {
+    transition-delay: 0.5s;
+ }
+  
+  /* Ensure menu toggle button is visible */
+  .fa-bars {
+     position: fixed;
+     top: 25px;
+     right: 20px;
+     padding: 0 5% 10px;
+     font-size: 18px;
+     cursor: pointer;
+     z-index: 1101;
+     color: #ffd700;
+     display: block !important; /* Show by default */
+  }
+  
+  /* Close button inside menu */
+  .fa-xmark {
+     position: absolute;
+     top: 15px;
+     left: 20px;
+     font-size: 18px;
+     cursor: pointer;
+     color: #ffd700;
+     display: none !important; /* Hide by default */
+  }
+  
+   /* When menu is open, show `fa-xmark` and hide `fa-bars` */
+   #sidemenu.active ~ .fa-bars {
+    display: none !important;
+ }
+ 
+ #sidemenu.active .fa-xmark {
+     display: block !important;
+ }
+ #header .nav-container nav ul li a::after{
+    left: 48px;
+ }
+ #header .nav-container nav ul li a:hover::after{
+    width: 35%;
+ }
+
+
+
+/* ABOUT SECTION */
+.about-image img{
+    width: 100%;
+    margin: 0;
+}
+.about-container, .music-grid {
+    grid-template-columns: 1fr;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: none;
+}
+
+.about-highlights {
+    grid-template-columns: 1fr;
+}
+
+.event-card {
+    flex-direction: column;
+}
+
+.event-date {
+    padding: 15px;
+}
+
+.event-actions {
+    flex-direction: column;
+}
+
+.share-btn {
+    align-self: flex-start;
+}
+
+.music-card {
+    height: 250px;
+}
+/* contact */
+#contact {
+    padding: 60px 5%;
+}
+
+.contact-left,
+.contact-right {
+    padding: 30px;
+}
+
+.contact-left h1 {
+    font-size: 1.8rem;
+}
+
+.contact-left p {
+    font-size: 1rem;
+}
+.contact-left .cv{
+    display: flex;
+    justify-content: center;
+}
+.social-icons {
+    justify-content: center;
+}
+
+.contact-right form .btn2 {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* small screen */
+@media (max-width: 480px) {
+    .contact-left p i {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* tablet */
+@media (max-width: 992px) {
+    #contact .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-left h1 {
+        font-size: 2rem;
+    }
+}
